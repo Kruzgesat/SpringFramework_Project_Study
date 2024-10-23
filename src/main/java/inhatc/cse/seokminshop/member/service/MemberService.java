@@ -21,21 +21,12 @@ public class MemberService {
     }
 
     private void validateDuplicateMember(Member member) {
-        /*
+
         Optional<Member> mem = memberRepository.findByEmail(member.getEmail());
         if (mem.isPresent()) {
             Member m = mem.get();
+            System.out.println("이미 가입된 회원");
         }
-
-        else {
-            throw new IllegalStateException("이미 가입된 회원");
-        }
-        */
-
-        //lambda expression for exception handling
-
-        Member m = memberRepository.findByEmail(member.getEmail()).orElseThrow(() -> new IllegalStateException("이미 가입된 회원"));
-        System.out.println(m);
 
     }
 }
