@@ -33,7 +33,7 @@ public class Member {
     @Column(length = 200, nullable = true)
     private String address;     //UserAddress
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private Role role;          //UserRole
 
     public static Member createMember(MemberDto memberDto, PasswordEncoder passwordEncoder) {
