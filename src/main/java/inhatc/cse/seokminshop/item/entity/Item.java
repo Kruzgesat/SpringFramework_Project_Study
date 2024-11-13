@@ -1,5 +1,6 @@
 package inhatc.cse.seokminshop.item.entity;
 
+import inhatc.cse.seokminshop.common.entity.BaseEntity;
 import inhatc.cse.seokminshop.item.constant.ItemSellStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 
-public class Item {
+public class Item extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
