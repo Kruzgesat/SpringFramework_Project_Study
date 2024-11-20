@@ -14,13 +14,9 @@ import lombok.*;
 public class ItemDto {
 
     private Long id;            //Product ID
-
     private String itemNm;      //Product Name
-
     private int price;          //Product Price
-
     private int stockNumber;    //Product Stock
-
     private String itemDetail;  //Product Detail Information
 
 

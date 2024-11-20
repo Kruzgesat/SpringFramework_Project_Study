@@ -3,6 +3,7 @@ package inhatc.cse.seokminshop.item.controller;
 
 import inhatc.cse.seokminshop.item.dto.ItemDataDto;
 import inhatc.cse.seokminshop.item.dto.ItemDto;
+import inhatc.cse.seokminshop.item.dto.ItemFormDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,8 @@ import java.util.List;
 public class ItemController {
 
     @GetMapping("/admin/item/add")
-    public String itemAdd() {
+    public String itemAdd(Model model) {
+        model.addAttribute("itemFormDto", new ItemFormDto());
         return "item/add";
     }
 

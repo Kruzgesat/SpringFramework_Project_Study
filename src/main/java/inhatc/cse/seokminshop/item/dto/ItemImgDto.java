@@ -20,7 +20,7 @@ public class ItemImgDto {
     private String imgUrl;
     private String repImgYn;
 
-    public static ModelMapper modelMapper = new ModelMapper();
+    private static ModelMapper modelMapper = new ModelMapper();
 
     //Entity -> DTO
     public static ItemImgDto of(ItemImg itemImg) {

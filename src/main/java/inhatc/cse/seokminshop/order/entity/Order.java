@@ -36,7 +36,6 @@ public class Order extends BaseEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "order" , cascade = CascadeType.ALL, orphanRemoval = true)
     //Relation with OrderItem, Manage by OrderItems' order, Cascading All Types, Remove If Object becomes Orphan
-
     private final List<OrderItem> orderItems = new ArrayList<>();
 
 
